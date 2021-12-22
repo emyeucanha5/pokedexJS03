@@ -116,7 +116,7 @@ function showPokemon(pokes){
 
 window.addEventListener('scroll', async (e) => {
   if(isFetching) return;
-  if(Math.floor(document.body.offsetHeight-window.scrollY-window.innerHeight)==0){
+  if(Math.floor(document.body.offsetHeight-window.scrollY-window.innerHeight)<=0.9){
     offset = offset + 18;
     await loadPokemons(offset,limit);
   }
